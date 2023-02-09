@@ -34,8 +34,9 @@
 // });
 let count = 0;
 function recurseAnime() {
-    count = count + 5
-    if (count > 400) return;
+
+    if (count < 800)
+        count = count + 5
     document.querySelector('.block').style.left = count + 'px'
     animation()
 }
