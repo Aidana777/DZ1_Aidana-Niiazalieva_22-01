@@ -35,7 +35,7 @@
 let count = 0;
 function recurseAnime() {
 
-    if (count < 800)
+    if (count < 1200)
         count = count + 5
     document.querySelector('.block').style.left = count + 'px'
     animation()
