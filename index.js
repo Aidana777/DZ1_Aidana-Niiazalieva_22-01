@@ -20,7 +20,7 @@
         password.addEventListener('input', () => {
             const passBox = document.querySelector('.passBox');
             const passText = document.querySelector('.passText');
-            const passPattern =  /^(?=.*\d) (?=.*[a-z])(?=.*[A-Z]) [a-zA-Z0-9]{4,}$/;            ;
+            const passPattern =  /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,}$/;            ;
 
             if (password.value.match(passPattern)) {
                 passBox.classList.add('valid');
@@ -29,6 +29,6 @@
             } else {
                 passBox.classList.add('invalid');
                 passBox.classList.remove('valid');
-                passText.innerHTML = "Your password must be at least 4 characters as well as contain at least one uppercase, one lowercase, and one number.";
+                passText.innerHTML = "Your password must be at least 4 characters "
             }
         });
