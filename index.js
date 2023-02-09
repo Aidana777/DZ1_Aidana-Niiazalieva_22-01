@@ -4,9 +4,9 @@
         email.addEventListener('input', () => {
             const emailBox = document.querySelector('.emailBox');
             const emailText = document.querySelector('.emailText');
-            const emailPattern = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$/;
+            const emailReg = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$/;
 
-            if (email.value.match(emailPattern)) {
+            if (email.value.match(emailReg)) {
                 emailBox.classList.add('valid');
                 emailBox.classList.remove('invalid');
                 emailText.innerHTML = "Your Email Address in Valid";
@@ -20,9 +20,9 @@
         password.addEventListener('input', () => {
             const passBox = document.querySelector('.passBox');
             const passText = document.querySelector('.passText');
-            const passPattern =  /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,}$/;            ;
+            const regPass =  /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,}$/;            ;
 
-            if (password.value.match(passPattern)) {
+            if (password.value.match(regPass)) {
                 passBox.classList.add('valid');
                 passBox.classList.remove('invalid');
                 passText.innerHTML = "Your Password in Valid";
