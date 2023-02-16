@@ -34,13 +34,13 @@
 // });
 let count = 0;
 function recurseAnime() {
-    if (count < 1200)
-    count = count + 5
-document.querySelector('.block').style.left = count + 'px'
-animation()
+    if (count < 550)
+        count = count + 5
+    document.querySelector('.block').style.left = count + 'px'
+    animation()
 }
 
 function animation() {
-    setTimeout(recurseAnime, 100)
+    setTimeout(recurseAnime, 10)
 }
 animation()
